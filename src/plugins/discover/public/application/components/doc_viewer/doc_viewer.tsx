@@ -69,7 +69,7 @@ export function DocViewer(renderProps: DocViewRenderProps) {
 
   return (
     <div className="osdDocViewer">
-      <EuiTabbedContent tabs={tabs} />
+      <EuiTabbedContent size="s" tabs={tabs} />
     </div>
   );
 }

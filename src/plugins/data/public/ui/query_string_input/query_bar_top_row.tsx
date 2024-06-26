@@ -249,6 +249,7 @@ export default function QueryBarTopRow(props: QueryBarTopRowProps) {
         isDisabled={isDateRangeInvalid}
         isLoading={props.isLoading}
         onClick={onClickSubmitButton}
+        //size={"s"}
         data-test-subj="querySubmitButton"
       />
     );
@@ -315,6 +316,7 @@ export default function QueryBarTopRow(props: QueryBarTopRowProps) {
           dateFormat={uiSettings!.get('dateFormat')}
           isAutoRefreshOnly={props.showAutoRefreshOnly}
           className="osdQueryBar__datePicker"
+          //compressed={true}
         />
       </EuiFlexItem>
     );

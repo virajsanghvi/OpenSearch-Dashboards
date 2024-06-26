@@ -57,7 +57,7 @@ export const PanelEditWithDrilldowns: React.FC = () => {
     sampleAction('test-7', 94, 'Replace panel', 'submodule'),
     sampleAction('test-8', 93, 'Delete from dashboard', 'trash'),
 
-    sampleAction('test-9', 10, 'Create drilldown', 'plusInCircle', grouping),
+    sampleAction('test-9', 10, 'Create drilldown', 'plus', grouping),
     sampleAction('test-10', 9, 'Manage drilldowns', 'list', grouping),
   ];
 

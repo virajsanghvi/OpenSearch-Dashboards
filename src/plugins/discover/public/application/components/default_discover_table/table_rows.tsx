@@ -138,7 +138,7 @@ export const TableRow = ({
           <EuiFlexItem>
             <h4
               data-test-subj="docTableRowDetailsTitle"
-              className="euiTitle euiTitle--xsmall"
+              className="euiTitle euiText--small"
               i18n-id="discover.docTable.tableRow.detailHeading"
               i18n-default-message="Expanded document"
             >

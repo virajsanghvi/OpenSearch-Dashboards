@@ -62,7 +62,7 @@ export class AddPanelAction implements Action<ActionContext> {
   }
 
   public getIconType(): EuiIconType {
-    return 'plusInCircleFilled';
+    return 'plus';
   }
 
   public async isCompatible(context: ActionExecutionContext<ActionContext>) {

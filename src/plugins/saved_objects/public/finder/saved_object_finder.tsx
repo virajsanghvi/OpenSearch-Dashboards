@@ -499,7 +499,7 @@ class SavedObjectFinderUi extends React.Component<
           </EuiFlexGroup>
         )}
         {items.length > 0 ? (
-          <EuiListGroup data-test-subj="savedObjectFinderItemList" maxWidth={false}>
+          <EuiListGroup data-test-subj="savedObjectFinderItemList" maxWidth={false} size="s">
             {items.map((item) => {
               const currentSavedObjectMetaData = savedObjectMetaData.find(
                 (metaData) => metaData.type === item.type
@@ -527,6 +527,7 @@ class SavedObjectFinderUi extends React.Component<
                   }
                   title={fullName}
                   data-test-subj={`savedObjectTitle${(item.title || '').split(' ').join('-')}`}
+                  size="s"
                 />
               );
             })}

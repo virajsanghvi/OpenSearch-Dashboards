@@ -124,6 +124,7 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
     if (this.props.disableMsg) {
       return (
         <EuiFieldText
+          compressed={true}
           aria-label={intl.formatMessage({
             id: 'inputControl.vis.listControl.selectTextPlaceholder',
             defaultMessage: 'Select...',
@@ -158,6 +159,7 @@ class ListControlUi extends PureComponent<ListControlUiProps, ListControlUiState
 
     return (
       <EuiComboBox
+        compressed={true}
         placeholder={intl.formatMessage({
           id: 'inputControl.vis.listControl.selectPlaceholder',
           defaultMessage: 'Select...',

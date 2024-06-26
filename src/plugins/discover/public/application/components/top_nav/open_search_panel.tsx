@@ -33,7 +33,7 @@ import rison from 'rison-node';
 import { i18n } from '@osd/i18n';
 import { FormattedMessage } from '@osd/i18n/react';
 import {
-  EuiButton,
+  EuiButtonEmpty,
   EuiFlexGroup,
   EuiFlexItem,
   EuiFlyout,
@@ -61,7 +61,7 @@ export function OpenSearchPanel({ onClose, makeUrl }: Props) {
   } = useOpenSearchDashboards<DiscoverViewServices>();
 
   return (
-    <EuiFlyout ownFocus onClose={onClose} data-test-subj="loadSearchForm">
+    <EuiFlyout ownFocus onClose={onClose} data-test-subj="loadSearchForm" className="euiText--small">
       <EuiFlyoutHeader hasBorder>
         <EuiTitle size="m">
           <h2>
@@ -101,7 +101,7 @@ export function OpenSearchPanel({ onClose, makeUrl }: Props) {
         <EuiFlexGroup justifyContent="flexEnd">
           <EuiFlexItem grow={false}>
             {/* eslint-disable-next-line @elastic/eui/href-or-on-click */}
-            <EuiButton
+            <EuiButtonEmpty
               fill
               onClick={onClose}
               href={addBasePath(
@@ -114,7 +114,7 @@ export function OpenSearchPanel({ onClose, makeUrl }: Props) {
                 id="discover.topNav.openSearchPanel.manageSearchesButtonLabel"
                 defaultMessage="Manage searches"
               />
-            </EuiButton>
+            </EuiButtonEmpty>
           </EuiFlexItem>
         </EuiFlexGroup>
       </EuiFlyoutFooter>

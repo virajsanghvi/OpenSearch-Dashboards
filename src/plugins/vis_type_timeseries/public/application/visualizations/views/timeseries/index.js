@@ -52,6 +52,7 @@ import { BarSeriesDecorator } from './decorators/bar_decorator';
 import { getStackAccessors } from './utils/stack_format';
 import { getBaseTheme, getChartClasses } from './utils/theme';
 
+console.log('TEST vsb');
 const generateAnnotationData = (values, formatter) =>
   values.map(({ key, docs }) => ({
     dataValue: key,
@@ -158,7 +159,9 @@ export const TimeSeries = ({
         const dataValues = generateAnnotationData(data, tooltipFormatter);
         const style = { line: { stroke: color } };
 
+        console.log('annotations', annotations);
         return (
+          
           <LineAnnotation
             key={id}
             id={id}
@@ -227,6 +230,7 @@ export const TimeSeries = ({
           }
 
           if (lines?.show) {
+            console.log('lines', lines, series);
             return (
               <AreaSeriesDecorator
                 key={key}

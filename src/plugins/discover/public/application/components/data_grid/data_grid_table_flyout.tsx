@@ -41,7 +41,7 @@ export function DataGridFlyout({
   // TODO: replace EuiLink with doc_view_links registry
   // TODO: Also move the flyout higher in the react tree to prevent redrawing the table component and slowing down page performance
   return (
-    <EuiFlyout onClose={onClose} size="m" data-test-subj="documentDetailFlyOut" ownFocus={false}>
+    <EuiFlyout onClose={onClose} size="m" data-test-subj="documentDetailFlyOut" ownFocus={false} className="euiText--small" hasBorder>
       <EuiFlyoutHeader>
         <EuiTitle>
           <h2>

@@ -118,6 +118,7 @@ export class RangeControl extends PureComponent<RangeControlProps, RangeControlS
 
     return (
       <ValidatedDualRange
+        formRowDisplay="rowCompressed"
         id={this.props.control.id}
         min={min}
         max={max}

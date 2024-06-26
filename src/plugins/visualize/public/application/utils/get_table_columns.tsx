@@ -186,7 +186,7 @@ export const getNoItemsMessage = (createItem: () => void) => (
       <EuiButton
         onClick={createItem}
         fill
-        iconType="plusInCircle"
+        iconType="plus"
         data-test-subj="createVisualizationPromptButton"
       >
         <FormattedMessage

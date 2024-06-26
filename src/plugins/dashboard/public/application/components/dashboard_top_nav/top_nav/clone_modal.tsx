@@ -161,20 +161,22 @@ export class DashboardCloneModal extends React.Component<Props, State> {
     return (
       <EuiModal
         data-test-subj="dashboardCloneModal"
-        className="dshCloneModal"
+        className="dshCloneModal euiText--small"
         onClose={this.props.onClose}
       >
         <EuiModalHeader>
           <EuiModalHeaderTitle>
-            <FormattedMessage
-              id="dashboard.topNav.cloneModal.cloneDashboardModalHeaderTitle"
-              defaultMessage="Clone dashboard"
-            />
+            <h2>
+              <FormattedMessage
+                id="dashboard.topNav.cloneModal.cloneDashboardModalHeaderTitle"
+                defaultMessage="Clone dashboard"
+              />
+            </h2>
           </EuiModalHeaderTitle>
         </EuiModalHeader>
 
         <EuiModalBody>
-          <EuiText>
+          <EuiText size="s">
             <p>
               <FormattedMessage
                 id="dashboard.topNav.cloneModal.enterNewNameForDashboardDescription"

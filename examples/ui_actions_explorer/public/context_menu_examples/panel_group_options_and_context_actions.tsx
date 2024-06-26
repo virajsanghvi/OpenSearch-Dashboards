@@ -53,7 +53,7 @@ export const PanelGroupOptionsAndContextActions: React.FC = () => {
     sampleAction('test-1', 100, 'Edit visualization', 'pencil'),
     sampleAction('test-2', 99, 'Clone panel', 'partial'),
 
-    sampleAction('test-9', 10, 'Create drilldown', 'plusInCircle', drilldownGrouping),
+    sampleAction('test-9', 10, 'Create drilldown', 'plus', drilldownGrouping),
     sampleAction('test-10', 9, 'Manage drilldowns', 'list', drilldownGrouping),
 
     sampleAction('test-11', 10, 'Example action', 'dashboardApp', exampleGroup),

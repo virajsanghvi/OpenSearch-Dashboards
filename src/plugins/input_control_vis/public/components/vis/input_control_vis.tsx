@@ -130,7 +130,8 @@ export class InputControlVis extends Component<InputControlVisProps> {
       <EuiFlexGroup wrap={true}>
         <EuiFlexItem grow={false}>
           <EuiButton
-            fill
+            //fill
+            size="s"
             onClick={this.handleSubmit}
             disabled={!this.props.hasChanges()}
             data-test-subj="inputControlSubmitBtn"
@@ -143,6 +144,7 @@ export class InputControlVis extends Component<InputControlVisProps> {
         </EuiFlexItem>
         <EuiFlexItem grow={false}>
           <EuiButtonEmpty
+            size="s"
             onClick={this.handleReset}
             disabled={!this.props.hasChanges()}
             data-test-subj="inputControlCancelBtn"
@@ -155,6 +157,7 @@ export class InputControlVis extends Component<InputControlVisProps> {
         </EuiFlexItem>
         <EuiFlexItem grow={false}>
           <EuiButtonEmpty
+            size="s"
             onClick={this.handleClearAll}
             disabled={!this.props.hasValues()}
             data-test-subj="inputControlClearBtn"

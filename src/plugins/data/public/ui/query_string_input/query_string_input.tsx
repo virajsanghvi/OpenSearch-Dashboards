@@ -578,7 +578,7 @@ export default class QueryStringInputUI extends Component<Props, State> {
 
   handleAutoHeight = () => {
     if (this.inputRef !== null && document.activeElement === this.inputRef) {
-      this.inputRef.style.setProperty('height', `${this.inputRef.scrollHeight}px`, 'important');
+      //this.inputRef.style.setProperty('height', `${this.inputRef.scrollHeight}px`, 'important');
     }
     this.handleListUpdate();
   };
@@ -615,6 +615,7 @@ export default class QueryStringInputUI extends Component<Props, State> {
       'euiFormControlLayout euiFormControlLayout--group osdQueryBar__wrap',
       this.props.className
     );
+      // 'euiFormControlLayout euiFormControlLayout--group euiFormControlLayout--compressed osdQueryBar__wrap',
 
     return (
       <div className={className}>
@@ -637,6 +638,7 @@ export default class QueryStringInputUI extends Component<Props, State> {
               ref={this.queryBarInputDivRefInstance}
             >
               <EuiTextArea
+                compressed={true}
                 placeholder={
                   this.props.placeholder ||
                   i18n.translate('data.query.queryBar.searchInputPlaceholder', {

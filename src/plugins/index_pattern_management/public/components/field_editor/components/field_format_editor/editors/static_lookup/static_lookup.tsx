@@ -170,7 +170,7 @@ export class StaticLookupFormatEditor extends DefaultFormatEditor<
       <Fragment>
         <EuiBasicTable items={items} columns={columns} style={{ maxWidth: '400px' }} />
         <EuiSpacer size="m" />
-        <EuiButton iconType="plusInCircle" size="s" onClick={this.addLookup}>
+        <EuiButton iconType="plus" size="s" onClick={this.addLookup}>
           <FormattedMessage
             id="indexPatternManagement.staticLookup.addEntryButton"
             defaultMessage="Add entry"

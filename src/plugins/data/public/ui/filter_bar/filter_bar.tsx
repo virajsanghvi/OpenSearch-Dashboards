@@ -34,6 +34,7 @@ import {
   EuiFlexItem,
   EuiPopover,
   EuiResizeObserver,
+  EuiIcon,
 } from '@elastic/eui';
 import { FormattedMessage, InjectedIntl, injectI18n } from '@osd/i18n/react';
 import classNames from 'classnames';
@@ -109,12 +110,12 @@ function FilterBarUI(props: Props) {
 
     const button = (
       <EuiButtonEmpty
-        size="xs"
+        size="s"
         onClick={() => setIsAddFilterPopoverOpen(true)}
         data-test-subj="addFilter"
         className="globalFilterBar__addButton"
+        iconType="plus"
       >
-        +{' '}
         <FormattedMessage
           id="data.filter.filterBar.addFilterButtonLabel"
           defaultMessage="Add filter"

@@ -226,6 +226,7 @@ export const DashboardListing = () => {
         defaultMessage: 'Dashboards',
       })}
       toastNotifications={notifications.toasts}
+      className="euiText--small"
     />
   );
 };

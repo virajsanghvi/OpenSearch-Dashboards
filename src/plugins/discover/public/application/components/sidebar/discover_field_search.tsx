@@ -245,6 +245,7 @@ export function DiscoverFieldSearch({ onChange, value, types }: Props) {
       <EuiFlexItem>
         <EuiOutsideClickDetector onOutsideClick={() => {}} isDisabled={!isPopoverOpen}>
           <EuiFieldSearch
+            compressed={true}
             aria-label={searchPlaceholder}
             data-test-subj="fieldFilterSearchInput"
             fullWidth
@@ -277,6 +278,7 @@ export function DiscoverFieldSearch({ onChange, value, types }: Props) {
                 onClick={handleFacetButtonClicked}
                 numActiveFilters={activeFiltersCount}
                 isSelected={isPopoverOpen}
+                size={'s'}
               >
                 <FormattedMessage
                   id="discover.fieldChooser.fieldFilterFacetButtonLabel"

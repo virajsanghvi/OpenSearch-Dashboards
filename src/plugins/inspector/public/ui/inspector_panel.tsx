@@ -119,11 +119,11 @@ export class InspectorPanel extends Component<InspectorPanelProps, InspectorPane
 
     return (
       <React.Fragment>
-        <EuiFlyoutHeader hasBorder>
+        <EuiFlyoutHeader hasBorder className="euiText--small">
           <EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
             <EuiFlexItem grow={true}>
               <EuiTitle size="s">
-                <h1>{title}</h1>
+                <h2>{title || 'Inspect'}</h2>
               </EuiTitle>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
@@ -135,7 +135,7 @@ export class InspectorPanel extends Component<InspectorPanelProps, InspectorPane
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlyoutHeader>
-        <EuiFlyoutBody className="insInspectorPanel__flyoutBody">
+        <EuiFlyoutBody className="insInspectorPanel__flyoutBody euiText--small">
           {this.renderSelectedPanel()}
         </EuiFlyoutBody>
       </React.Fragment>

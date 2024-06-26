@@ -315,7 +315,7 @@ export function SavedQueryManagementComponent({
                 <EuiFlexItem grow={false}>
                   <EuiButton
                     size="s"
-                    fill
+                    //fill
                     onClick={handleSave}
                     aria-label={i18n.translate(
                       'data.search.searchBar.savedQueryPopoverSaveButtonAriaLabel',

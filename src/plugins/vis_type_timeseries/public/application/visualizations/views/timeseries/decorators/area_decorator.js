@@ -58,7 +58,7 @@ export function AreaSeriesDecorator({
   const id = seriesId;
   const groupId = seriesGroupId;
   const areaSeriesStyle = getAreaStyles({ points, lines, color });
-
+  console.log('name', name, 'data', data);
   const seriesSettings = {
     id,
     name,

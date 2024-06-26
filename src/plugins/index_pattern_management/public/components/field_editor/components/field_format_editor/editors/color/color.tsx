@@ -249,7 +249,7 @@ export class ColorFormatEditor extends DefaultFormatEditor<ColorFormatEditorForm
       <Fragment>
         <EuiBasicTable items={items} columns={columns} />
         <EuiSpacer size="m" />
-        <EuiButton iconType="plusInCircle" size="s" onClick={this.addColor}>
+        <EuiButton iconType="plus" size="s" onClick={this.addColor}>
           <FormattedMessage
             id="indexPatternManagement.color.addColorButton"
             defaultMessage="Add color"

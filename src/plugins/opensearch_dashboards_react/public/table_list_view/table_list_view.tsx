@@ -500,9 +500,10 @@ class TableListView extends React.Component<TableListViewProps, TableListViewSta
     const defaultCreateButton = this.props.createItem ? (
       <EuiFlexItem grow={false}>
         <EuiButton
+          size="s"
           onClick={this.props.createItem}
           data-test-subj="newItemButton"
-          iconType="plusInCircle"
+          iconType="plus"
           fill
         >
           <FormattedMessage
@@ -556,7 +557,7 @@ class TableListView extends React.Component<TableListViewProps, TableListViewSta
     return (
       <EuiPage
         data-test-subj={this.props.entityName + 'LandingPage'}
-        className="itemListing__page"
+        className="itemListing__page euiText--small"
         restrictWidth
       >
         <EuiPageBody

@@ -32,3 +32,42 @@
     flex-shrink: 0;
   }
 }
+
+// make dividers normal
+.euiHeaderSectionItem--borderLeft:after, 
+.euiHeaderSectionItem--borderRight:after {
+  top: 0;
+}
+
+// show query bar
+.osdQueryBar__textarea {
+//  padding: 6px 8px 3px !important;
+//  height: 30px !important;
+//  transform: translateY(-1px) translateX(0px) !important;
+
+}
+
+// make table denser
+.osd-table th,
+.osd-table td {
+  padding: 6px !important;
+}
+.osd-table td.osdDocTableCell__toggleDetails {
+  padding: 3px 0 0 4px !important;
+}
+
+// make discover left bar field group header smaller
+.dscSideBar_fieldGroup {
+  font-size: .75rem !important;
+  font-weight: 600;
+}
+
+.globalFilterItem__editorForm {
+  padding: 8px !important;
+}
+
+.euiPopoverTitle,
+.euiContextMenuPanelTitle--small,
+.euiContextMenuPanelTitle {
+  text-transform: none !important;
+}

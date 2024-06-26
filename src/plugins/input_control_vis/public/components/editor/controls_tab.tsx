@@ -214,7 +214,7 @@ class ControlsTabUi extends PureComponent<ControlsTabUiProps, ControlsTabUiState
                 <EuiButton
                   fill
                   onClick={this.handleAddControl}
-                  iconType="plusInCircle"
+                  iconType="plus"
                   data-test-subj="inputControlEditorAddBtn"
                   aria-label={intl.formatMessage({
                     id: 'inputControl.editor.controlsTab.select.addControlAriaLabel',

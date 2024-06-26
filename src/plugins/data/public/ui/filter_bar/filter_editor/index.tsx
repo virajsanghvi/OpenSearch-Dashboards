@@ -108,7 +108,7 @@ class FilterEditorUI extends Component<Props, State> {
   public render() {
     return (
       <div>
-        <EuiPopoverTitle>
+        <EuiPopoverTitle paddingSize="s">
           <EuiFlexGroup alignItems="baseline" responsive={false}>
             <EuiFlexItem>
               <FormattedMessage
@@ -162,6 +162,7 @@ class FilterEditorUI extends Component<Props, State> {
               <div>
                 <EuiSpacer size="m" />
                 <EuiFormRow
+                  display="rowCompressed"
                   fullWidth={true}
                   label={this.props.intl.formatMessage({
                     id: 'data.filter.filterEditor.createCustomLabelInputLabel',
@@ -169,6 +170,7 @@ class FilterEditorUI extends Component<Props, State> {
                   })}
                 >
                   <EuiFieldText
+                    compressed={true}
                     fullWidth={true}
                     value={`${this.state.customLabel}`}
                     onChange={this.onCustomLabelChange}
@@ -182,7 +184,8 @@ class FilterEditorUI extends Component<Props, State> {
             <EuiFlexGroup direction="rowReverse" alignItems="center" responsive={false}>
               <EuiFlexItem grow={false}>
                 <EuiButton
-                  fill
+                  //fill
+                  size='s'
                   onClick={this.onSubmit}
                   isDisabled={!this.isFilterValid()}
                   data-test-subj="saveFilter"
@@ -195,6 +198,7 @@ class FilterEditorUI extends Component<Props, State> {
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
                 <EuiButtonEmpty
+                  size='s'
                   flush="right"
                   onClick={this.props.onCancel}
                   data-test-subj="cancelSaveFilter"
@@ -232,12 +236,14 @@ class FilterEditorUI extends Component<Props, State> {
       <EuiFlexGroup>
         <EuiFlexItem>
           <EuiFormRow
+            display="rowCompressed"
             label={this.props.intl.formatMessage({
               id: 'data.filter.filterEditor.indexPatternSelectLabel',
               defaultMessage: 'Index Pattern',
             })}
           >
             <IndexPatternComboBox
+              compressed={true}
               placeholder={this.props.intl.formatMessage({
                 id: 'data.filter.filterBar.indexPatternSelectPlaceholder',
                 defaultMessage: 'Select an index pattern',
@@ -277,12 +283,14 @@ class FilterEditorUI extends Component<Props, State> {
 
     return (
       <EuiFormRow
+        display="rowCompressed"
         label={this.props.intl.formatMessage({
           id: 'data.filter.filterEditor.fieldSelectLabel',
           defaultMessage: 'Field',
         })}
       >
         <FieldComboBox
+          compressed={true}
           id="fieldInput"
           fullWidth={true}
           isDisabled={!selectedIndexPattern}
@@ -308,12 +316,14 @@ class FilterEditorUI extends Component<Props, State> {
     const operators = selectedField ? getOperatorOptions(selectedField) : [];
     return (
       <EuiFormRow
+        display="rowCompressed"
         label={this.props.intl.formatMessage({
           id: 'data.filter.filterEditor.operatorSelectLabel',
           defaultMessage: 'Operator',
         })}
       >
         <OperatorComboBox
+          compressed={true}
           isDisabled={!selectedField}
           placeholder={
             selectedField
@@ -341,12 +351,14 @@ class FilterEditorUI extends Component<Props, State> {
   private renderCustomEditor() {
     return (
       <EuiFormRow
+        display="rowCompressed"
         label={i18n.translate('data.filter.filterEditor.queryDslLabel', {
           defaultMessage: 'OpenSearch Query DSL',
         })}
         fullWidth={true}
       >
         <EuiCodeEditor
+          compressed={true}
           value={this.state.queryDsl}
           onChange={this.onQueryDslChange}
           mode="json"

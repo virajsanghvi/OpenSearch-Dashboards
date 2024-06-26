@@ -332,6 +332,7 @@ class HeaderHelpMenuUI extends Component<Props, State> {
       >
         <EuiIcon
           type="questionInCircle"
+          style={{height: '20px', width: '20px'}}
           size="m"
           title={intl.formatMessage({
             id: 'core.ui.chrome.headerGlobalNav.helpMenuButtonTitle',

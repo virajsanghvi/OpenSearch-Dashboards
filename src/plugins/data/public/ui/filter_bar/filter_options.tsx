@@ -162,6 +162,7 @@ class FilterOptionsUI extends Component<Props, State> {
         closePopover={this.closePopover}
         button={
           <EuiButtonIcon
+            size="s"
             onClick={this.togglePopover}
             iconType="filter"
             aria-label={this.props.intl.formatMessage({

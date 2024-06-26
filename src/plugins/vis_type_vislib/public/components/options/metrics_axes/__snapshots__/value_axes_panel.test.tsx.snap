@@ -35,7 +35,7 @@ exports[`ValueAxesPanel component should init with the default set of props 1`] 
         <EuiButtonIcon
           aria-label="Add Y-axis"
           data-test-subj="visualizeAddYAxisButton"
-          iconType="plusInCircleFilled"
+          iconType="plus"
           onClick={[MockFunction]}
         />
       </EuiToolTip>

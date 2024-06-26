@@ -55,7 +55,7 @@ export const DiscoverNoResults = ({ timeFieldName, queryLanguage }: Props) => {
       <Fragment>
         <EuiSpacer size="xl" />
 
-        <EuiText>
+        <EuiText size="s">
           <h2 data-test-subj="discoverNoResultsTimefilter">
             <FormattedMessage
               id="discover.noResults.expandYourTimeRangeTitle"
@@ -200,7 +200,8 @@ export const DiscoverNoResults = ({ timeFieldName, queryLanguage }: Props) => {
               defaultMessage="No results match your search criteria"
             />
           }
-          color="warning"
+          size="s"
+          //color="warning"
           iconType="help"
           data-test-subj="discoverNoResults"
         />

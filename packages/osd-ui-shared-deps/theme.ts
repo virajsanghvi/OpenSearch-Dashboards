@@ -38,7 +38,7 @@ export type Theme = typeof LightTheme;
 // in the OpenSearch Dashboards app we can rely on this global being defined, but in
 // some cases (like jest) the global is undefined
 export const tag: string = globals.__osdThemeTag__ || 'v8light';
-export const version = tag.startsWith('v7') ? 7 : 8;
+export const version = tag.startsWith('v7') ? 7 : (tag.startsWith('trineo') ? 'trineo' : 8);
 export const darkMode = tag.endsWith('dark');
 
 export let euiLightVars: Theme;
@@ -46,6 +46,9 @@ export let euiDarkVars: Theme;
 if (version === 7) {
   euiLightVars = require('@elastic/eui/dist/eui_theme_light.json');
   euiDarkVars = require('@elastic/eui/dist/eui_theme_dark.json');
+} else if (version === 'trineo') {
+  euiLightVars = require('@elastic/eui/dist/eui_theme_trineo_light.json');
+  euiDarkVars = require('@elastic/eui/dist/eui_theme_trineo_dark.json');
 } else {
   euiLightVars = require('@elastic/eui/dist/eui_theme_next_light.json');
   euiDarkVars = require('@elastic/eui/dist/eui_theme_next_dark.json');

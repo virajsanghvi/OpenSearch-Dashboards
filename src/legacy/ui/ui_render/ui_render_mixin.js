@@ -35,6 +35,8 @@ import * as v7light from '@elastic/eui/dist/eui_theme_light.json';
 import * as v7dark from '@elastic/eui/dist/eui_theme_dark.json';
 import * as v8light from '@elastic/eui/dist/eui_theme_next_light.json';
 import * as v8dark from '@elastic/eui/dist/eui_theme_next_dark.json';
+import * as trineolight from '@elastic/eui/dist/eui_theme_trineo_light.json';
+import * as trineodark from '@elastic/eui/dist/eui_theme_trineo_dark.json';
 import * as UiSharedDeps from '@osd/ui-shared-deps';
 import { OpenSearchDashboardsRequest } from '../../../core/server';
 import { AppBootstrap } from './bootstrap';
@@ -197,6 +199,10 @@ export function uiRenderMixin(osdServer, server, config) {
         v7: {
           light: getLoadingVars(v7light),
           dark: getLoadingVars(v7dark),
+        },
+        trineo: {
+          light: getLoadingVars(trineolight),
+          dark: getLoadingVars(trineodark),
         },
         v8: {
           light: getLoadingVars(v8light),

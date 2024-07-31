@@ -12,7 +12,7 @@ if (window.__osdStrictCsp__ && window.__osdCspNotEnforced__) {
   }
 
   var isDarkMode = window.__osdThemeTag__.endsWith('dark');
-  var themeVersion = window.__osdThemeTag__.startsWith('v7') ? 'v7' : 'v8';
+  var themeVersion = window.__osdThemeTag__.startsWith('v7') ? 'v7' : (window.__osdThemeTag__.startsWith('trineo') ? 'trineo' : 'v8');
 
   var loadingMessage = document.getElementById('osd_loading_message');
   loadingMessage.style.display = 'flex';
@@ -25,6 +25,9 @@ if (window.__osdStrictCsp__ && window.__osdCspNotEnforced__) {
     if (themeVersion === 'v7') {
       styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.darkCssDistFilename}}');
       styleSheetPaths.push('{{basePath}}/node_modules/@osd/ui-framework/dist/kui_dark.css')
+    } else if (themeVersion === 'trineo') {
+      styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.darkTrineoCssDistFilename}}');
+      styleSheetPaths.push('{{basePath}}/node_modules/@osd/ui-framework/dist/kui_dark.css')
     } else {
       styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.darkV8CssDistFilename}}');
       styleSheetPaths.push('{{basePath}}/node_modules/@osd/ui-framework/dist/kui_next_dark.css')
@@ -33,6 +36,9 @@ if (window.__osdStrictCsp__ && window.__osdCspNotEnforced__) {
   } else {
     if (themeVersion === 'v7') {
       styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.lightCssDistFilename}}');
+      styleSheetPaths.push('{{basePath}}/node_modules/@osd/ui-framework/dist/kui_light.css')
+    } else if (themeVersion === 'trineo') {
+      styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.lightTrineoCssDistFilename}}');
       styleSheetPaths.push('{{basePath}}/node_modules/@osd/ui-framework/dist/kui_light.css')
     } else {
       styleSheetPaths.push('{{regularBundlePath}}/osd-ui-shared-deps/{{UiSharedDeps.lightV8CssDistFilename}}');

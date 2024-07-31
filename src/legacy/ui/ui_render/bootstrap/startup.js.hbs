@@ -32,8 +32,10 @@ if ({{configEnableUserControl}}) {
 
 // TODO: source of truth for mapping should be elsewhere
 var darkMode = rawDarkMode ? 'dark' : 'light';
-var themeVersion = rawThemeVersion === 'v7' ? 'v7' : 'v8';
-
+var themeVersion = rawThemeVersion === 'v7' ? 'v7' : (rawThemeVersion === 'trineo' ? 'trineo' : 'v8');
+darkMode = 'light';
+themeVersion = 'trineo';
+console.log('THEME', darkMode, themeVersion);
 window.__osdThemeTag__ = themeVersion + darkMode;
 
 var themeSources = {{THEME_SOURCES}};
